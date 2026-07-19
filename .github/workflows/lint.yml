@@ -1,0 +1,15 @@
+name: Lint
+on: [pull_request, push]
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v4
+        with: python-version: 3.11
+      - name: Install linters
+        run: pip install ruff isort
+      - name: Run ruff
+        run: ruff check .
+      - name: Run isort
+        run: isort --check-only --diff .
