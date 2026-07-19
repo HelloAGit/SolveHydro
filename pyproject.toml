@@ -1,0 +1,26 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "hydrocomplex"
+version = "0.1.0"
+description = "Modular hydrology utilities: runoff, routing, metrics, calibration, and case studies."
+readme = "README.md"
+license = { text = "MIT" }
+authors = [{ name = "Your Name", email = "you@example.com" }]
+requires-python = ">=3.9"
+dependencies = [
+  "numpy>=1.24",
+  "pandas>=1.5",
+  "scipy>=1.10",
+  "matplotlib>=3.6",
+  "pydantic>=1.10"
+]
+[project.optional-dependencies]
+test = ["pytest", "pytest-cov"]
+ml = ["scikit-learn"]
+gridded = ["xarray"]
+
+[tool.setuptools.packages.find]
+where = ["src"]
