@@ -1,0 +1,9 @@
+case_name: "synthetic_catchment_flood"
+time_step: "1H"
+cn: 75
+unit_hydrograph:
+  type: "triangular"
+  length_steps: 6
+muskingum:
+  k: 2.0
+  x: 0.2
