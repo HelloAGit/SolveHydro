@@ -22,5 +22,8 @@ test = ["pytest", "pytest-cov"]
 ml = ["scikit-learn"]
 gridded = ["xarray"]
 
+[project.scripts]
+hydrocomplex = "hydrocomplex.cli:main"
+
 [tool.setuptools.packages.find]
 where = ["src"]
